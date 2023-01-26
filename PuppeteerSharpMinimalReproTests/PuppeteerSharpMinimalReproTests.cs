@@ -8,7 +8,6 @@ namespace PuppeteerSharpMinimalReproTests
         [FactRunableOnWindows]
         public void PublishedSelfContainedBinaryShouldWork()
         {
-            var testFileName = "BasicTextFormated.html";
             var tempPath = Path.GetTempPath();
             var actualFilePath = Path.Combine(tempPath, $"google.jpg");
 
@@ -40,7 +39,6 @@ namespace PuppeteerSharpMinimalReproTests
             if (!isExited)
             {
                 process.Kill();
-                // run on windows: Stop-Process -Name "chrome"
             }
 
             Assert.True(isExited);
