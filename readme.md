@@ -51,3 +51,18 @@ await using var page = await browser.NewPageAsync();
 await page.GoToAsync("http://www.google.com");
 await page.ScreenshotAsync("google.jpg");
 ```
+
+## Update 9.0.3
+
+```
+.\PuppeteerSharpMinimalRepro.exe
+AppDomain.BaseDirectory: C:\PuppeteerSharpMinimalRepro\PuppeteerSharpMinimalRepro\bin\Release\net6.0\publish\
+typeof(Puppeteer).Assembly.Location:
+Unhandled exception. System.NotSupportedException: CodeBase is not supported on assemblies loaded from a single-file bundle.
+   at System.Reflection.RuntimeAssembly.get_CodeBase()
+   at PuppeteerSharp.BrowserFetcher.GetExecutablePath() in C:\projects\puppeteer-sharp\lib\PuppeteerSharp\BrowserFetcher.cs:line 356
+   at PuppeteerSharp.BrowserFetcher..ctor() in C:\projects\puppeteer-sharp\lib\PuppeteerSharp\BrowserFetcher.cs:line 53
+   at Program.<Main>$(String[] args) in C:\PuppeteerSharpMinimalRepro\PuppeteerSharpMinimalRepro\Program.cs:line 5
+   at Program.<Main>(String[] args)
+PS C:\PuppeteerSharpMinimalRepro\PuppeteerSharpMinimalRepro\bin\Release\net6.0\publish>
+```
