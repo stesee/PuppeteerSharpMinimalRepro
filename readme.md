@@ -1,4 +1,8 @@
-# Minimal repro PuppeteerSharp issue 
+# Update
+
+Issue got fixed in puppeteer sharp 9.1.0
+
+## Minimal repro PuppeteerSharp issue 
 
 PuppeteerSharp 9.0.0 invented a bug that will cause to fail the parameterless ctor of BrowserFetcher when using in some published exe with "Produce single file" enabled.
 
